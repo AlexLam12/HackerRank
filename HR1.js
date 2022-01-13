@@ -1,5 +1,9 @@
 function processData(input) {
     //Enter your code here
+    //if first letter is S insert space before capital letter and make all letters lowercase
+    //if first letter is C capitalize letter after space
+    //if second letter is M add () st the end
+    //if second letter is C capitalize first letter
     const titleCase = (word) => word.charAt(0).toUpperCase() + word.slice(1);
     function processData(input) {
       const inputArray = (input.includes("\r")) ? input.split("\r\n") : input.split("\n");
@@ -34,7 +38,8 @@ function processData(input) {
               break;
           }
        }
-       });
+       })
+       return input;
     }
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -46,3 +51,4 @@ function processData(input) {
     process.stdin.on("end", function () {
        processData(_input);
     });
+}
