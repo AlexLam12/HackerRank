@@ -1,10 +1,14 @@
 function countingValleys(steps, path) {
-    // Wrote my code here
-    let altitude = 0
-    let valleys = 0
-    for (const a of path) {
-      if (altitude === -1 && a === 'U') {valleys++}
-      a === 'U' ? altitude++ : altitude--
-    }
-  return valleys
+  // Write your code here
+  let valleyCount = 0
+  let elevation = 0
+  for (const a of path){
+      if(elevation === 0 && a === 'D'){valleyCount++}
+      if( a === 'D'){
+          elevation--
+      }else{
+          elevation++
+      }
+  }
+  return valleyCount
 }
