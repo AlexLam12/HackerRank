@@ -25,10 +25,13 @@ class Result
     public static int migratoryBirds(List<int> arr)
     {
         int mostFrequent = 0;
-        foreach (int bird in arr){
+        int [] eachBirdArr = new int [] {1,2,3,4,5};
+        
+        foreach (int bird in eachBirdArr){
             if (arr.Count(b => b == bird) > mostFrequent){
                 mostFrequent = bird;
             }
+            
         }
         return mostFrequent;
     }
