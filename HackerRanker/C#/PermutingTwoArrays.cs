@@ -1,3 +1,17 @@
+ using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
  static string twoArrays(int k, List<int> A, List<int> B)
     {
         int[] ABar=A.ToArray();
@@ -29,4 +43,17 @@
             }
         }
         return "NO";   
+    }
+
+    static string twoArrays(int k, List<int> A, List<int> B)
+    {
+       int[] Aarr = A.ToArray(); 
+       int[] Barr = B.ToArray();
+        string flag = "NO";
+        for(int i = 0; i < A.Count; i++){
+            if(Aarr[i]+Barr[i] > k){
+                flag = "YES";
+            }
+        };
+        return flag;
     }
